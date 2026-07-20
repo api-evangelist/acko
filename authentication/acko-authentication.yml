@@ -1,0 +1,21 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/acko-apisetu-openapi-original.json
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: apiKey
+  type: apiKey
+  in: header
+  parameter: X-APISETU-APIKEY
+  sources:
+  - openapi/acko-apisetu-openapi-original.json
+- name: clientId
+  type: apiKey
+  in: header
+  parameter: X-APISETU-CLIENTID
+  sources:
+  - openapi/acko-apisetu-openapi-original.json
