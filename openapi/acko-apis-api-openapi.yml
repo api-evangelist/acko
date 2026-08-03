@@ -3,13 +3,12 @@ info:
   description: Insurance policies issued by Acko General Insurance (https://www.acko.com) can be fetched by the citizens in their Digilocker accounts.
   termsOfService: https://apisetu.gov.in/terms.php
   title: Acko General Insurance Limited APIs API
-  version: 3.0.0
+  version: '3.0'
   x-apisguru-categories:
   - open_data
   x-origin:
   - format: openapi
     url: https://apisetu.gov.in/api_specification_v8/acko.yaml
-    version: '3.0'
   x-providerName: apisetu.gov.in
   x-serviceName: acko
   x-logo:

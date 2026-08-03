@@ -1,0 +1,14 @@
+{
+  "provider": "acko",
+  "sources": [
+    "acko-apis-api-openapi.yml"
+  ],
+  "outputs": [
+    "acko-apis-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

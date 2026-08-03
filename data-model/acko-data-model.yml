@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/acko-apisetu-openapi-original.json
+note: >-
+  Entity graph derived from components.schemas of the API Setu Acko OpenAPI.
+  The certificate operations exchange a consent artifact and return a
+  certificate document.
+entities:
+- name: ConsentArtifact
+  schema: ConsentArtifactSchema
+  fields: [consent, signature]
+  description: Digitally signed consent (DEPA-style) submitted to fetch a policy certificate.
+- name: Certificate
+  schema: AcademicCertificateSchema
+  fields: [CertificateData, IssuedBy, IssuedTo, issueDate, issuedAt, language, name, number, status, type, validFromDate]
+  description: >-
+    The issued insurance policy certificate returned in PDF/XML/JSON. Schema is
+    the generic API Setu certificate envelope (named AcademicCertificateSchema
+    in the shared spec) reused for insurance policy documents.
+relationships:
+- from: Certificate
+  to: ConsentArtifact
+  type: requires
+  via: request body consent

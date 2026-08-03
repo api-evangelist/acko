@@ -1,0 +1,21 @@
+# Acko General Insurance
+
+> Acko (ACKO Technology & Services Private Limited) is an Indian digital-first general insurance company founded in 2016 and headquartered in Bengaluru. It sells car, bike, health, term life and travel insurance online, and is a portfolio company of Accel. Acko exposes insurance policy certificates to citizens through India's government API Setu / DigiLocker platform, and operates a separate enterprise partner API for embedded insurance issuance.
+
+## APIs
+
+- [Acko General Insurance (API Setu / DigiLocker)](https://apisetu.gov.in/acko/v3): Fetch Acko car, health and two-wheeler insurance policy certificates via India's government API Setu platform. Auth: X-APISETU-APIKEY + X-APISETU-CLIENTID headers.
+- [Acko Enterprise API](https://www.acko.com/enterprise/documentation/enterprise.html): Partner/enterprise issuance API covering token generation, Loan-Shield, Trip, GIG, Health, House, Credit Life, Fire, Cyber and Electronics insurance products, plus policy/claims management.
+
+## Specs
+
+- [OpenAPI 3.0 (API Setu)](openapi/acko-apisetu-openapi-original.json): 3 operations — cripc (car), hlipc (health), twipc (two-wheeler) certificate fetch.
+
+## Docs
+
+- [Enterprise API Documentation](https://www.acko.com/enterprise/documentation/enterprise.html)
+- [API Setu directory listing](https://betadirectory.api-setu.in/api-collection/acko)
+- [About Acko](https://www.acko.com/about-us/)
+- [Careers](https://careers.acko.com/)
+- [Privacy Policy](https://www.acko.com/privacy-policy/)
+- [Terms and Conditions](https://www.acko.com/terms-and-conditions/)

@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: searched
+source: openapi/acko-apisetu-openapi-original.json
+note: >-
+  Lifecycle for the API Setu Acko certificate surface. No public status page,
+  deprecation policy, or SLA was found for this government issuer surface, so
+  no StatusPage/Deprecation pointers are emitted (absence is recorded, not
+  fabricated).
+versioning:
+  scheme: uri-path
+  current: v3
+terms_of_service: https://apisetu.gov.in/terms.php
+deprecation:
+  policy_url: null
+  sunset_header: false
+sla:
+  url: null
+status_page: null
+deprecated_operations: []

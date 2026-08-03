@@ -1,0 +1,51 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/acko-apisetu-openapi-original.json
+format: http-status
+note: >-
+  Derived from the OpenAPI 4xx/5xx responses on the API Setu Acko certificate
+  operations. The spec declares status codes only (no response bodies or
+  application/problem+json envelope), so titles/remediation below are the
+  standard API Setu / DigiLocker semantics for these codes rather than a
+  provider-published error registry.
+problems:
+- status: 400
+  title: Bad Request
+  detail: The request was malformed or a required parameter/consent artifact was missing or invalid.
+  remediation: Validate the request body and the ConsentArtifactSchema before retrying.
+  source_operations:
+  - openapi/acko-apisetu-openapi-original.json#cripc
+  - openapi/acko-apisetu-openapi-original.json#hlipc
+  - openapi/acko-apisetu-openapi-original.json#twipc
+- status: 401
+  title: Unauthorized
+  detail: Missing or invalid X-APISETU-APIKEY / X-APISETU-CLIENTID headers.
+  remediation: Supply valid API Setu API key and client id credentials.
+  source_operations:
+  - openapi/acko-apisetu-openapi-original.json#cripc
+  - openapi/acko-apisetu-openapi-original.json#hlipc
+  - openapi/acko-apisetu-openapi-original.json#twipc
+- status: 404
+  title: Not Found
+  detail: No matching insurance certificate/policy was found for the supplied identifiers.
+  remediation: Verify the policy/certificate parameters supplied in the request.
+  source_operations:
+  - openapi/acko-apisetu-openapi-original.json#cripc
+  - openapi/acko-apisetu-openapi-original.json#hlipc
+  - openapi/acko-apisetu-openapi-original.json#twipc
+- status: 500
+  title: Internal Server Error
+  detail: An unexpected error occurred on the issuer/gateway side.
+  remediation: Retry later; contact API Setu support if it persists.
+- status: 502
+  title: Bad Gateway
+  detail: The upstream issuer system returned an invalid response to the gateway.
+  remediation: Retry with backoff.
+- status: 503
+  title: Service Unavailable
+  detail: The issuer service is temporarily unavailable.
+  remediation: Retry with backoff.
+- status: 504
+  title: Gateway Timeout
+  detail: The upstream issuer system did not respond in time.
+  remediation: Retry with backoff.

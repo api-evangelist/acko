@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/acko-apisetu-openapi-original.json
+note: >-
+  Cross-cutting conventions derived from the API Setu Acko OpenAPI. This is the
+  government DigiLocker issuer surface. No idempotency-key, pagination, or
+  rate-limit signaling is documented in the spec.
+authentication:
+  style: api-key
+  headers: [X-APISETU-APIKEY, X-APISETU-CLIENTID]
+  in: header
+  ref: authentication/acko-authentication.yml
+idempotency:
+  supported: false
+pagination:
+  supported: false
+  note: Certificate operations are single-record fetches; no list/collection endpoints.
+versioning:
+  scheme: uri-path
+  current: v3
+  base: https://apisetu.gov.in/acko/v3
+request_format:
+  content_type: application/json
+  consent: ConsentArtifactSchema (signed consent artifact required in request body)
+response_format:
+  formats: [application/pdf, xml, json]
+error_envelope:
+  format: http-status-only
+  ref: errors/acko-problem-types.yml

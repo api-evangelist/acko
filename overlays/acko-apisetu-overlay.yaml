@@ -1,0 +1,23 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Acko General Insurance (API Setu)
+  version: 1.0.0
+extends: openapi/acko-apisetu-openapi-original.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: acko
+    x-apievangelist-surface: apisetu-digilocker
+    x-apievangelist-note: >-
+      Government DigiLocker issuer surface for fetching Acko insurance policy
+      certificates. Acko also operates a separate enterprise partner API at
+      https://www.acko.com/enterprise/documentation/enterprise.html
+- target: $.paths['/cripc/certificate'].post
+  update:
+    x-apievangelist-flow: fetch-car-insurance-certificate
+- target: $.paths['/hlipc/certificate'].post
+  update:
+    x-apievangelist-flow: fetch-health-insurance-certificate
+- target: $.paths['/twipc/certificate'].post
+  update:
+    x-apievangelist-flow: fetch-two-wheeler-insurance-certificate

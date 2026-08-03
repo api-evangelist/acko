@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/acko-apisetu-openapi-original.json
+note: >-
+  Standards conformance derived from the API Setu Acko OpenAPI. This is the
+  government DigiLocker issuer surface, not Acko's own enterprise API.
+standards:
+- id: openapi-3.0
+  conforms: true
+  evidence: openapi 3.0.0 document published at apisetu.gov.in
+- id: api-key-auth
+  conforms: true
+  evidence: securitySchemes apiKey X-APISETU-APIKEY + X-APISETU-CLIENTID (header)
+- id: oauth2
+  conforms: false
+  evidence: no oauth2 securityScheme declared
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: error responses declare status codes only, no application/problem+json
+- id: consent-artifact
+  conforms: true
+  evidence: requestBody carries a ConsentArtifactSchema (India DEPA-style consent)
+- id: fhir
+  conforms: false
+- id: fapi
+  conforms: false

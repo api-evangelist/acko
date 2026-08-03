@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: generated
+source: openapi/acko-apisetu-openapi-original.json
+skills:
+- file: acko-fetch-car-insurance-certificate.md
+  name: Fetch an Acko car insurance certificate
+  api: openapi/acko-apisetu-openapi-original.json
+  operations: [cripc]
+- file: acko-fetch-health-insurance-certificate.md
+  name: Fetch an Acko health insurance certificate
+  api: openapi/acko-apisetu-openapi-original.json
+  operations: [hlipc]
+- file: acko-fetch-two-wheeler-insurance-certificate.md
+  name: Fetch an Acko two-wheeler insurance certificate
+  api: openapi/acko-apisetu-openapi-original.json
+  operations: [twipc]
