@@ -58,6 +58,8 @@ apis:
   - type: OpenAPI
     url: openapi/acko-apis-api-openapi.yml
 common:
+- type: Overlay
+  url: overlays/acko-apisetu-overlay.yaml
 - type: AgenticAccess
   url: agentic-access/acko-agentic-access.yml
 - type: Authentication
