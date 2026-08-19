@@ -1,0 +1,81 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Acko General Insurance Limited APIs API",
+    "version": "3.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "APIs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Insurance Policy - Car",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://apisetu.gov.in/acko/v3/cripc/certificate",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-APISETU-APIKEY",
+              "value": "{{X-APISETU-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "API to verify Insurance Policy - Car."
+        },
+        {
+          "info": {
+            "name": "Insurance Policy - Health",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://apisetu.gov.in/acko/v3/hlipc/certificate",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-APISETU-APIKEY",
+              "value": "{{X-APISETU-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "API to verify Insurance Policy - Health."
+        },
+        {
+          "info": {
+            "name": "Insurance Policy - Two Wheeler",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://apisetu.gov.in/acko/v3/twipc/certificate",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-APISETU-APIKEY",
+              "value": "{{X-APISETU-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "API to verify Insurance Policy - Two Wheeler."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

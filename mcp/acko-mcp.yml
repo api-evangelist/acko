@@ -2,9 +2,8 @@ generated: '2026-07-18'
 method: derived
 status: candidate
 source: openapi/acko-apisetu-openapi-original.json
-note: >-
-  No official Acko MCP server was found. Candidate tool list derived one tool
-  per OpenAPI operation from the API Setu certificate surface.
+note: No official Acko MCP server was found. Candidate tool list derived one tool per OpenAPI operation
+  from the API Setu certificate surface.
 server:
   name: acko-apisetu
   transport: http
@@ -18,3 +17,9 @@ tools:
 - name: fetch_two_wheeler_insurance_certificate
   description: Fetch an Acko two-wheeler (bike) insurance policy certificate via API Setu.
   source_operation: openapi/acko-apisetu-openapi-original.json#twipc
+deployment:
+  mode: none
+  verified: derived
+  tools: 3
+  checked: '2026-08-12'
+  source: catalog MCP census

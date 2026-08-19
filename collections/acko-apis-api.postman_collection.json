@@ -1,0 +1,1475 @@
+{
+  "item": [
+    {
+      "id": "3ea4175d-48d8-4ac6-bd6a-486541426ec1",
+      "name": "APIs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b748a94a-a08c-44cb-b3b2-849da411a749",
+          "name": "Insurance Policy - Car",
+          "request": {
+            "name": "Insurance Policy - Car",
+            "description": {
+              "content": "API to verify Insurance Policy - Car.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cripc",
+                "certificate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/pdf"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-APISETU-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"txnId\": \"<uuid>\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"<string>\",\n    \"phoneno\": \"<string>\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"<uuid>\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3fd9e8db-3a41-438c-9c14-7e7b29928748",
+              "name": "The certificate data in response body in PDF, XML or JSON format as requested in format parameter.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cripc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/pdf"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/pdf"
+                }
+              ],
+              "body": "Response body contains contents of the certificate in PDF format.",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "152b5eb8-7c26-4ba8-8faa-27e125c237dc",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cripc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"invalid_txnid\",\n  \"errorDescription\": \"Bad request\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "26765d2a-64cf-40d1-8d2a-df91bc735217",
+              "name": "Unauthorized access",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cripc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"invalid_authentication\",\n  \"errorDescription\": \"You are not authorized to use this API\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "950f9da1-55d3-4c84-b670-af6af79d588f",
+              "name": "No record found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cripc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"record_not_found\",\n  \"errorDescription\": \"Your API url or path is incorrect\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0fb86de7-3740-4c1c-80c6-8bf878040d9b",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cripc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"internal_server_error\",\n  \"errorDescription\": \"Internal server error\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b238e269-68f1-4b2c-9712-22ae8c24625d",
+              "name": "Bad gateway",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cripc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Gateway",
+              "code": 502,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"bad_gatewy\",\n  \"errorDescription\": \"Publisher service returned an invalid response\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e426d822-90e1-4861-95aa-aeef4b751b11",
+              "name": "Service unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cripc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"service_unavailable\",\n  \"errorDescription\": \"Publisher service is temporarily unavailable\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fa1610e4-1407-4cfc-9111-e78d0a8e4677",
+              "name": "Gateway timeout",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cripc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Gateway Timeout",
+              "code": 504,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"gateway_timeout\",\n  \"errorDescription\": \"Publisher service did not respond in time\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a95fc3b9-865d-4d93-a062-d89959bb32a8",
+          "name": "Insurance Policy - Health",
+          "request": {
+            "name": "Insurance Policy - Health",
+            "description": {
+              "content": "API to verify Insurance Policy - Health.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "hlipc",
+                "certificate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/pdf"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-APISETU-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"txnId\": \"<uuid>\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"<string>\",\n    \"phoneno\": \"<string>\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"<uuid>\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8ddf80aa-5b8d-4148-9551-7ec4837c1e0c",
+              "name": "The certificate data in response body in PDF, XML or JSON format as requested in format parameter.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hlipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/pdf"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/pdf"
+                }
+              ],
+              "body": "Response body contains contents of the certificate in PDF format.",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "affc4ebc-9505-4b0c-88df-6fbc5d539369",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hlipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"invalid_txnid\",\n  \"errorDescription\": \"Bad request\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "540db295-7a26-49a4-a8ea-259a459112ba",
+              "name": "Unauthorized access",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hlipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"invalid_authentication\",\n  \"errorDescription\": \"You are not authorized to use this API\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a31212ec-e1bf-4dfd-9d5c-872c9333f6e6",
+              "name": "No record found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hlipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"record_not_found\",\n  \"errorDescription\": \"Your API url or path is incorrect\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b8c8287b-6f89-46ce-9428-d110ea59b37e",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hlipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"internal_server_error\",\n  \"errorDescription\": \"Internal server error\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "26cd0c48-45f9-42d6-9fe4-59f9670d7062",
+              "name": "Bad gateway",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hlipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Gateway",
+              "code": 502,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"bad_gatewy\",\n  \"errorDescription\": \"Publisher service returned an invalid response\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "04a6322f-9c65-445e-935d-68b054cdd9e7",
+              "name": "Service unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hlipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"service_unavailable\",\n  \"errorDescription\": \"Publisher service is temporarily unavailable\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e3dd5826-23a5-42d0-84a4-0f8c87e5c75d",
+              "name": "Gateway timeout",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hlipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Gateway Timeout",
+              "code": 504,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"gateway_timeout\",\n  \"errorDescription\": \"Publisher service did not respond in time\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "91675323-79cc-4101-8c02-257dadc866af",
+          "name": "Insurance Policy - Two Wheeler",
+          "request": {
+            "name": "Insurance Policy - Two Wheeler",
+            "description": {
+              "content": "API to verify Insurance Policy - Two Wheeler.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "twipc",
+                "certificate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/pdf"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-APISETU-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"txnId\": \"<uuid>\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"<string>\",\n    \"phoneno\": \"<string>\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"<uuid>\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8f0d3954-2a69-4db7-83b4-7a36d812c83c",
+              "name": "The certificate data in response body in PDF, XML or JSON format as requested in format parameter.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "twipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/pdf"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/pdf"
+                }
+              ],
+              "body": "Response body contains contents of the certificate in PDF format.",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "042e633b-ce27-4be7-aeff-e6f4dd5d2199",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "twipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"invalid_txnid\",\n  \"errorDescription\": \"Bad request\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ca3f2178-1733-4e7b-8f7f-2b7ca624e3a4",
+              "name": "Unauthorized access",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "twipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"invalid_authentication\",\n  \"errorDescription\": \"You are not authorized to use this API\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c278a145-de26-4abe-a3b1-2fecc744e03e",
+              "name": "No record found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "twipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"record_not_found\",\n  \"errorDescription\": \"Your API url or path is incorrect\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "35a3d3b6-0862-492d-953e-52bb7fe370fd",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "twipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"internal_server_error\",\n  \"errorDescription\": \"Internal server error\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "808b93a4-0c48-4282-a94b-519036a12214",
+              "name": "Bad gateway",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "twipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Gateway",
+              "code": 502,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"bad_gatewy\",\n  \"errorDescription\": \"Publisher service returned an invalid response\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2aea2a1c-f423-48db-9ba7-79383d10b7c4",
+              "name": "Service unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "twipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"service_unavailable\",\n  \"errorDescription\": \"Publisher service is temporarily unavailable\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fe069e9c-197e-4f68-83da-941c3e3463b4",
+              "name": "Gateway timeout",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "twipc",
+                    "certificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-APISETU-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"txnId\": \"f7f1469c-29b0-4325-9dfc-c567200a70f7\",\n  \"format\": \"<string>\",\n  \"certificateParameters\": {\n    \"policyno\": \"DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX\",\n    \"phoneno\": \"10 Digits without any prefix\"\n  },\n  \"consentArtifact\": {\n    \"consent\": {\n      \"consentId\": \"ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba\",\n      \"timestamp\": \"<dateTime>\",\n      \"dataConsumer\": {\n        \"id\": \"<string>\"\n      },\n      \"dataProvider\": {\n        \"id\": \"<string>\"\n      },\n      \"purpose\": {\n        \"description\": \"<string>\"\n      },\n      \"user\": {\n        \"idType\": \"<string>\",\n        \"idNumber\": \"<string>\",\n        \"mobile\": \"<string>\",\n        \"email\": \"<string>\"\n      },\n      \"data\": {\n        \"id\": \"<string>\"\n      },\n      \"permission\": {\n        \"access\": \"<string>\",\n        \"dateRange\": {\n          \"from\": \"<dateTime>\",\n          \"to\": \"<dateTime>\"\n        },\n        \"frequency\": {\n          \"unit\": \"<string>\",\n          \"value\": \"<number>\",\n          \"repeats\": \"<number>\"\n        }\n      }\n    },\n    \"signature\": {\n      \"signature\": \"<string>\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Gateway Timeout",
+              "code": 504,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"gateway_timeout\",\n  \"errorDescription\": \"Publisher service did not respond in time\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://apisetu.gov.in/acko/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9c929904-1c33-426b-89fa-82f774fc9bd1",
+    "name": "Acko General Insurance Limited APIs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Insurance policies issued by Acko General Insurance (https://www.acko.com) can be fetched by the citizens in their Digilocker accounts.",
+      "type": "text/plain"
+    }
+  }
+}
