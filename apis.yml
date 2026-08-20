@@ -36,6 +36,15 @@ tags:
 - Company
 - Consumer
 - Insurance
+- Insurtech
+- Financial-Services
+- Digital Insurance
+- India
+- Embedded Insurance
+tags_raw:
+- Company
+- Consumer
+- Insurance
 - InsurTech
 - Financial Services
 - Digital Insurance
@@ -52,7 +61,8 @@ apis:
   description: The APIs API from Acko — 3 operation(s) for apis.
   humanURL: https://betadirectory.api-setu.in/api-collection/acko
   baseURL: https://apisetu.gov.in/acko/v3
-  tags:
+  tags: []
+  tags_raw:
   - APIs
   properties:
   - type: OpenAPI
