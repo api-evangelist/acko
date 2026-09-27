@@ -6,19 +6,16 @@
   "outputs": [
     "acko-apis-api-openapi.yml"
   ],
-  "archived": [
-    "deleted 1 superseded output(s) from the previous generation"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "acko-apisetu-openapi-original.json: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
     "acko-apisetu-openapi-original.json: declared missing tag: APIs",
-    "superseded outputs removed: acko-ap-is-api-openapi.yml",
-    "apis.yml register: written (+1 apis, 1 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
-    "acko-ap-is-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+    "acko-apis-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }

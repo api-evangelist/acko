@@ -2,7 +2,7 @@ openapi: 3.2.0
 info:
   description: Insurance policies issued by Acko General Insurance (https://www.acko.com) can be fetched by the citizens in their Digilocker accounts.
   termsOfService: https://apisetu.gov.in/terms.php
-  title: Acko General Insurance Limited AP Is API
+  title: Acko General Insurance Limited APIs API
   version: 3.0.0
   x-apisguru-categories:
   - open_data
@@ -219,21 +219,36 @@ paths:
       - APIs
 components:
   responses:
-    502Error:
+    504Error:
       content:
         application/json:
           schema:
             properties:
               error:
                 enum:
-                - bad_gatewy
+                - gateway_timeout
                 type: string
               errorDescription:
                 enum:
-                - Publisher service returned an invalid response
+                - Publisher service did not respond in time
                 type: string
             type: object
-      description: Bad gateway
+      description: Gateway timeout
+    500Error:
+      content:
+        application/json:
+          schema:
+            properties:
+              error:
+                enum:
+                - internal_server_error
+                type: string
+              errorDescription:
+                enum:
+                - Internal server error
+                type: string
+            type: object
+      description: Internal server error
     400Error:
       content:
         application/json:
@@ -274,6 +289,36 @@ components:
                 type: string
             type: object
       description: No record found
+    503Error:
+      content:
+        application/json:
+          schema:
+            properties:
+              error:
+                enum:
+                - service_unavailable
+                type: string
+              errorDescription:
+                enum:
+                - Publisher service is temporarily unavailable
+                type: string
+            type: object
+      description: Service unavailable
+    502Error:
+      content:
+        application/json:
+          schema:
+            properties:
+              error:
+                enum:
+                - bad_gatewy
+                type: string
+              errorDescription:
+                enum:
+                - Publisher service returned an invalid response
+                type: string
+            type: object
+      description: Bad gateway
     401Error:
       content:
         application/json:
@@ -291,51 +336,6 @@ components:
                 type: string
             type: object
       description: Unauthorized access
-    500Error:
-      content:
-        application/json:
-          schema:
-            properties:
-              error:
-                enum:
-                - internal_server_error
-                type: string
-              errorDescription:
-                enum:
-                - Internal server error
-                type: string
-            type: object
-      description: Internal server error
-    504Error:
-      content:
-        application/json:
-          schema:
-            properties:
-              error:
-                enum:
-                - gateway_timeout
-                type: string
-              errorDescription:
-                enum:
-                - Publisher service did not respond in time
-                type: string
-            type: object
-      description: Gateway timeout
-    503Error:
-      content:
-        application/json:
-          schema:
-            properties:
-              error:
-                enum:
-                - service_unavailable
-                type: string
-              errorDescription:
-                enum:
-                - Publisher service is temporarily unavailable
-                type: string
-            type: object
-      description: Service unavailable
   schemas:
     ConsentArtifactSchema:
       properties:
