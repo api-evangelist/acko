@@ -219,6 +219,68 @@ paths:
       - APIs
 components:
   responses:
+    504Error:
+      content:
+        application/json:
+          schema:
+            properties:
+              error:
+                enum:
+                - gateway_timeout
+                type: string
+              errorDescription:
+                enum:
+                - Publisher service did not respond in time
+                type: string
+            type: object
+      description: Gateway timeout
+    503Error:
+      content:
+        application/json:
+          schema:
+            properties:
+              error:
+                enum:
+                - service_unavailable
+                type: string
+              errorDescription:
+                enum:
+                - Publisher service is temporarily unavailable
+                type: string
+            type: object
+      description: Service unavailable
+    401Error:
+      content:
+        application/json:
+          schema:
+            properties:
+              error:
+                enum:
+                - invalid_authentication
+                - invalid_authorization
+                type: string
+              errorDescription:
+                enum:
+                - Authentication failed
+                - You are not authorized to use this API
+                type: string
+            type: object
+      description: Unauthorized access
+    502Error:
+      content:
+        application/json:
+          schema:
+            properties:
+              error:
+                enum:
+                - bad_gatewy
+                type: string
+              errorDescription:
+                enum:
+                - Publisher service returned an invalid response
+                type: string
+            type: object
+      description: Bad gateway
     404Error:
       content:
         application/json:
@@ -259,21 +321,6 @@ components:
                 type: string
             type: object
       description: Bad request
-    502Error:
-      content:
-        application/json:
-          schema:
-            properties:
-              error:
-                enum:
-                - bad_gatewy
-                type: string
-              errorDescription:
-                enum:
-                - Publisher service returned an invalid response
-                type: string
-            type: object
-      description: Bad gateway
     500Error:
       content:
         application/json:
@@ -289,53 +336,6 @@ components:
                 type: string
             type: object
       description: Internal server error
-    503Error:
-      content:
-        application/json:
-          schema:
-            properties:
-              error:
-                enum:
-                - service_unavailable
-                type: string
-              errorDescription:
-                enum:
-                - Publisher service is temporarily unavailable
-                type: string
-            type: object
-      description: Service unavailable
-    504Error:
-      content:
-        application/json:
-          schema:
-            properties:
-              error:
-                enum:
-                - gateway_timeout
-                type: string
-              errorDescription:
-                enum:
-                - Publisher service did not respond in time
-                type: string
-            type: object
-      description: Gateway timeout
-    401Error:
-      content:
-        application/json:
-          schema:
-            properties:
-              error:
-                enum:
-                - invalid_authentication
-                - invalid_authorization
-                type: string
-              errorDescription:
-                enum:
-                - Authentication failed
-                - You are not authorized to use this API
-                type: string
-            type: object
-      description: Unauthorized access
   schemas:
     ConsentArtifactSchema:
       properties:
