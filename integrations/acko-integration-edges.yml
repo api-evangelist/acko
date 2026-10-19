@@ -1,0 +1,51 @@
+edges:
+- partner_name: Sahamati Account Aggregator ecosystem (FIP / FIU)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://sahamati.org.in/fip-fiu-in-account-aggregators-ecosystem/
+  category: Account Aggregator FIP / FIU (India Stack, DEPA)
+  contract_reference:
+    register: Sahamati FIPs & FIUs in the AA ecosystem (sahamati.org.in/fip-fiu-in-account-aggregators-ecosystem)
+    standard: RBI NBFC-Account Aggregator framework (ReBIT AA technical standards)
+    spec_file: null
+    role: aa-fip-fiu
+    registered_name: Acko General Insurance Limited
+    register_id: Acko General Insurance Limited
+    licence_type: Private Non-Life Insurer
+    regulator: IRDAI
+    engagement_stage: Live
+    implementation_stages:
+      FIP:
+      - Live
+      FIU:
+      - Evaluating
+    matched_domain: acko.com
+    matched_by: domain
+    identity: wikidata Q60750850 'Acko General Insurance' P856 https://www.acko.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+    certified_products:
+    - product: AA FIP (production Central Registry)
+      role: FIP
+      stage: Live
+      lapsed: false
+    signal_note: certified_products = one per ROLE (FIP / FIU) at stage Live or Live-enabled (listed in the production
+      Central Registry after ReBIT-standard certification); Testing / In-Development are participation only. The
+      table has no lapse data, so lapsed is false
+    detected_by: sweep-india-stack.py
+    detected: '2026-10-19'
+  detected_by: sweep-india-stack.py
+  first_seen: '2026-10-19'
+generated: '2026-10-19'
+method: searched
+source:
+- https://sahamati.org.in/account-aggregators-in-india/
+- https://sahamati.org.in/fip-fiu-in-account-aggregators-ecosystem/
+- https://prod.registry.ondc.org/lookup
+checked:
+- https://prod.registry.ondc.org/lookup
+- https://sahamati.org.in/account-aggregators-in-india/
+- https://sahamati.org.in/fip-fiu-in-account-aggregators-ecosystem/
