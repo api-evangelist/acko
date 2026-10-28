@@ -64,6 +64,114 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Acko is a company surfaced as a portfolio company of accel and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.
+Acko (ACKO Technology & Services Private Limited) is an Indian digital-first general insurance company founded in 2016 and headquartered in Bengaluru, Karnataka. Acko sells car, bike, health, term life and travel insurance entirely online, along with group health and personal-accident cover and embedded insurance for partners. It is a portfolio company of Accel. Acko exposes insurance policy certificates to citizens through India's government API Setu / DigiLocker platform (car, health and two-wheeler certificate fetch), and operates a separate enterprise/partner issuance API covering token generation, Loan-Shield, Trip, GIG, Health, House, Credit Life, Fire, Cyber and Electronics products plus policy and claims management.
 
-Source: portfolio company of [accel](https://github.com/api-evangelist/accel) — http://www.acko.com
+**Areas:** Company · Consumer · Insurance · Insurtech · Financial Services · Digital Insurance · India · Embedded Insurance
+
+## Acko on APIs.io
+
+Everything profiled for Acko is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/acko/](https://apis.io/providers/acko/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Acko APIs API](https://apis.io/apis/acko/acko-apis-api/) — The APIs API from Acko — 3 operation(s) for apis.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [acko-apisetu](https://apis.io/servers/acko/acko-apisetu/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Acko Agentic Access](https://apis.io/agentic-access/acko/acko-agentic-access/)
+
+#### Collections (1)
+
+Postman and Open Collection request collections.
+
+- [Acko General Insurance Limited APIs API](https://apis.io/collections/acko/open-acko-apis-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Acko Apisetu Overlay](https://apis.io/overlays/acko/acko-apisetu-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Acko Authentication](https://apis.io/security/acko/acko-authentication/)
+- [Acko Domain Security](https://apis.io/security/acko/acko-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](http://www.acko.com)
+- [Documentation](https://www.acko.com/enterprise/documentation/enterprise.html)
+- [API reference](https://www.acko.com/enterprise/documentation/enterprise.html)
+- [Support](https://www.acko.com/contact-us/)
+- [Blog](https://www.acko.com/articles/)
+- [Terms of service](https://www.acko.com/terms-and-conditions/)
+- [Privacy policy](https://www.acko.com/privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 35.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 50.2 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 37.5 |
+| Access clarity | 21.1 |
+
+**Agent readiness 23.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 28.1** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/acko/](https://apis.io/providers/acko/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Acko: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/acko/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
