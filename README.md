@@ -104,6 +104,12 @@ OpenAPI overlays, including conversational phrasing for each operation.
 
 - [Acko Apisetu Overlay](https://apis.io/overlays/acko/acko-apisetu-overlay/)
 
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Acko API Rules](https://apis.io/rules/acko/acko-rules/)
+
 #### Security (2)
 
 Authentication, trust centre, and vulnerability disclosure.
@@ -125,18 +131,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 35.9** — thin · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 38.5** — thin · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 73.2 |
 | Contract quality | 50.2 |
-| Contract governance | 4.5 |
+| Contract governance | 18.2 |
 | Operational transparency | 0.0 |
 | Developer ergonomics | 37.5 |
-| Access clarity | 21.1 |
+| Access clarity | 29.8 |
 
-**Agent readiness 23.9** — agent-aware
+**Agent readiness 29.8** — agent-ready
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -146,7 +152,7 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | MCP Server | — |
 | Auth Clarity | bearer (partial credit) |
 | Idempotency | — |
-| Error Semantics | derived (partial credit) |
+| Error Semantics | verified |
 | OpenAPI Examples | verified |
 | Rate Limit Signal | — |
 | Event Surface Described | — |
@@ -159,8 +165,14 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 28.1** — Insurance
+**Regulatory alignment 22.8** — Insurance
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/acko/](https://apis.io/providers/acko/).
 
